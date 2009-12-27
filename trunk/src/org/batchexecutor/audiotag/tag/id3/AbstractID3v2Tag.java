@@ -1484,7 +1484,7 @@ public abstract class AbstractID3v2Tag extends AbstractID3Tag implements Tag
     /**
      * Does this tag contain a field with the specified id
      *
-     * @see com.hadeslee.jaudiotagger.tag.Tag#hasField(java.lang.String)
+     * @see org.batchexecutor.jaudiotagger.tag.Tag#hasField(java.lang.String)
      */
     public boolean hasField(String id)
     {
@@ -1494,7 +1494,7 @@ public abstract class AbstractID3v2Tag extends AbstractID3Tag implements Tag
     /**
      * Is this tag empty
      *
-     * @see com.hadeslee.jaudiotagger.tag.Tag#isEmpty()
+     * @see org.batchexecutor.jaudiotagger.tag.Tag#isEmpty()
      */
     public boolean isEmpty()
     {

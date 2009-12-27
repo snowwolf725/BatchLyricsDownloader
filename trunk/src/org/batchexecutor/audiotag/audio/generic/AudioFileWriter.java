@@ -45,7 +45,7 @@ public abstract class AudioFileWriter
 {
 
      // Logger Object
-    public static Logger logger = Logger.getLogger("com.hadeslee.jaudiotagger.audio.generic");
+    public static Logger logger = Logger.getLogger("org.batchexecutor.jaudiotagger.audio.generic");
 
     /**
      * If not <code>null</code>, this listener is used to notify the listener

@@ -44,7 +44,7 @@ import org.batchexecutor.audiotag.tag.flac.FlacTag;
 public class FlacTagWriter
 {
     // Logger Object
-    public static Logger logger = Logger.getLogger("com.hadeslee.jaudiotagger.audio.flac");
+    public static Logger logger = Logger.getLogger("org.batchexecutor.jaudiotagger.audio.flac");
 
     private List<MetadataBlock>  metadataBlockPadding        = new ArrayList<MetadataBlock>(1);
     private List<MetadataBlock>  metadataBlockApplication    = new ArrayList<MetadataBlock>(1);

@@ -40,7 +40,7 @@ public abstract class AbstractDataType
     protected static final String TYPE_ELEMENT = "element";
 
     //Logger
-     public static Logger logger = Logger.getLogger("com.hadeslee.jaudiotagger.tag.datatype");
+     public static Logger logger = Logger.getLogger("org.batchexecutor.jaudiotagger.tag.datatype");
 
     /**
      * Holds the data

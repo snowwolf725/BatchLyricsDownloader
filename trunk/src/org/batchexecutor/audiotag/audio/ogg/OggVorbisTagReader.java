@@ -41,7 +41,7 @@ import org.batchexecutor.audiotag.tag.vorbiscomment.VorbisCommentTag;
 public class OggVorbisTagReader
 {
     // Logger Object
-    public static Logger logger = Logger.getLogger("com.hadeslee.jaudiotagger.audio.ogg");
+    public static Logger logger = Logger.getLogger("org.batchexecutor.jaudiotagger.audio.ogg");
 
     private VorbisCommentReader vorbisCommentReader = new VorbisCommentReader();
 

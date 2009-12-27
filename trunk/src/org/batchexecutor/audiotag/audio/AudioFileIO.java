@@ -85,7 +85,7 @@ public class AudioFileIO
 {
 
     //Logger
-    public static Logger logger = Logger.getLogger("com.hadeslee.jaudiotagger.audio");
+    public static Logger logger = Logger.getLogger("org.batchexecutor.jaudiotagger.audio");
 
     // !! Do not forget to also add new supported extensions to AudioFileFilter
     // !!

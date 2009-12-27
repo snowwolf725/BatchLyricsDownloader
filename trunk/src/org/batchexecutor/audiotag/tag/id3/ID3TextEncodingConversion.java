@@ -12,7 +12,7 @@ import org.batchexecutor.audiotag.tag.id3.valuepair.TextEncoding;
 public class ID3TextEncodingConversion
 {
     //Logger
-    public static Logger logger = Logger.getLogger("com.hadeslee.jaudiotagger.tag.id3");
+    public static Logger logger = Logger.getLogger("org.batchexecutor.jaudiotagger.tag.id3");
 
 
     /**

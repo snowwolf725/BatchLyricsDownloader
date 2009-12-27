@@ -32,7 +32,6 @@ public class DownloadListener implements ActionListener {
 				_btnDownloadLyrics.setText("Start");
 			}
 		}catch(Exception e){
-			System.out.println("\n Hello");
 			e.printStackTrace();
 		}
 	}

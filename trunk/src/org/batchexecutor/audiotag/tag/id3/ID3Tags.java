@@ -32,7 +32,7 @@ import org.batchexecutor.audiotag.tag.TagException;
 public class ID3Tags
 {
 //Logger
-    public static Logger logger = Logger.getLogger("com.hadeslee.jaudiotagger.tag.id3");
+    public static Logger logger = Logger.getLogger("org.batchexecutor.jaudiotagger.tag.id3");
     
 
     private ID3Tags()

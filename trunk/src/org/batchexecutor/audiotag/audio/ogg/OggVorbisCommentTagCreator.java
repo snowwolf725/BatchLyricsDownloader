@@ -38,7 +38,7 @@ import org.batchexecutor.audiotag.tag.vorbiscomment.VorbisCommentReader;
 public class OggVorbisCommentTagCreator
 {
     // Logger Object
-    public static Logger logger = Logger.getLogger("com.hadeslee.jaudiotagger.audio.ogg");
+    public static Logger logger = Logger.getLogger("org.batchexecutor.jaudiotagger.audio.ogg");
 
     public static final int FIELD_FRAMING_BIT_LENGTH        = 1;
     public static final byte FRAMING_BIT_VALID_VALUE         = (byte)0x01;

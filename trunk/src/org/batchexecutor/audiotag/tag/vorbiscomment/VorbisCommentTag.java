@@ -377,7 +377,7 @@ public class VorbisCommentTag extends AbstractTag
      *
      * <p>Overridden because check for size of one because there is always a vendor tag unless just
       * created an empty vorbis tag as part of flac tag in which case size could be zero
-     * @see com.hadeslee.jaudiotagger.tag.Tag#isEmpty()
+     * @see org.batchexecutor.jaudiotagger.tag.Tag#isEmpty()
      */
     public boolean isEmpty()
     {

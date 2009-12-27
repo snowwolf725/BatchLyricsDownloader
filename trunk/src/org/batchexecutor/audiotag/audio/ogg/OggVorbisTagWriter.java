@@ -40,7 +40,7 @@ import org.batchexecutor.audiotag.tag.vorbiscomment.VorbisCommentTag;
 public class OggVorbisTagWriter
 {
     // Logger Object
-    public static Logger logger = Logger.getLogger("com.hadeslee.jaudiotagger.audio.ogg");
+    public static Logger logger = Logger.getLogger("org.batchexecutor.jaudiotagger.audio.ogg");
 
     private OggVorbisCommentTagCreator tc = new OggVorbisCommentTagCreator();
     private OggVorbisTagReader reader = new OggVorbisTagReader();

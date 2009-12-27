@@ -50,10 +50,10 @@ public class TagInfoFactory {
     private TagInfoFactory() {
         super();
         log.setLevel(Level.OFF);
-        MpegTagInfoClass = getTagInfoImpl("com.hadeslee.yoyoplayer.tag.MpegInfo");
-        VorbisTagInfoClass = getTagInfoImpl("com.hadeslee.yoyoplayer.tag.OggVorbisInfo");
-        APETagInfoClass = getTagInfoImpl("com.hadeslee.yoyoplayer.tag.APEInfo");
-        FlacTagInfoClass = getTagInfoImpl("com.hadeslee.yoyoplayer.tag.FlacInfo");
+        MpegTagInfoClass = getTagInfoImpl("org.batchexecutor.tag.MpegInfo");
+        VorbisTagInfoClass = getTagInfoImpl("org.batchexecutor.tag.OggVorbisInfo");
+        APETagInfoClass = getTagInfoImpl("org.batchexecutor.tag.APEInfo");
+        FlacTagInfoClass = getTagInfoImpl("org.batchexecutor.tag.FlacInfo");
     }
 
     public static synchronized TagInfoFactory getInstance() {
@@ -220,7 +220,7 @@ public class TagInfoFactory {
                 while (superClass != null) {
                     Class[] interfaces = superClass.getInterfaces();
                     for (int i = 0; i < interfaces.length; i++) {
-                        if ((interfaces[i].getName()).equals("com.hadeslee.yoyoplayer.tag.TagInfo")) {
+                        if ((interfaces[i].getName()).equals("org.batchexecutor.tag.TagInfo")) {
                             interfaceFound = true;
                             break;
                         }

@@ -16,7 +16,7 @@ import org.batchexecutor.audiotag.audio.mp3.MPEGFrameHeader;
 public class ID3Unsynchronization
 {
     //Logger
-    public static Logger logger = Logger.getLogger("com.hadeslee.jaudiotagger.tag.id3");
+    public static Logger logger = Logger.getLogger("org.batchexecutor.jaudiotagger.tag.id3");
 
 
     /**

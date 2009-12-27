@@ -380,12 +380,13 @@ public class PlayListItem implements Serializable {
         }
         //如果是文件,则当场读出来
         if (isFile) {
-            es.execute(new Runnable() {
-
-                public void run() {
-                    setLocation0(l, readInfo);
-                }
-            });
+        	setLocation0(l, readInfo);
+//            es.execute(new Runnable() {
+//
+//                public void run() {
+//                    setLocation0(l, readInfo);
+//                }
+//            });
         } else {//如果不是文件,则起个线程异步读出来
             new Thread() {
 
@@ -414,7 +415,7 @@ public class PlayListItem implements Serializable {
         }
         displayName = getFormattedDisplayName();
         log.log(Level.INFO, "setDisPlay=" + displayName);
-        Config.getConfig().getPlWindow().repaint();
+        //Config.getConfig().getPlWindow().repaint();
     }
 
     /**
@@ -505,13 +506,13 @@ public class PlayListItem implements Serializable {
      */
     public TagInfo getTagInfo() {
         if (taginfo == null) {
-            if (Config.getConfig().getReadTagInfoStrategy().equals(Config.READ_WHEN_PLAY)) {
-                /*if (Config.getConfig().getPlayer().getCurrentItem() == this) {
-                    setLocation(location, true);
-                }*/
-            } else {
+//            if (Config.getConfig().getReadTagInfoStrategy().equals(Config.READ_WHEN_PLAY)) {
+//                if (Config.getConfig().getPlayer().getCurrentItem() == this) {
+//                    setLocation(location, true);
+//                }
+//            } else {
                 setLocation(location, true);
-            }
+//            }
         }
         return taginfo;
     }

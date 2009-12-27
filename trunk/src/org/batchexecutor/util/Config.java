@@ -50,9 +50,9 @@ public class Config implements Serializable {
     /*******************************************************************/
     /*************常量定义区*********************************************/
     /*******************************************************************/
-    public static final String NAME = "YOYOPlayer";
+    public static final String NAME = "BatchExecutor";
     public static final String EXTS = "snd,aifc,aif,wav,au,mp1,mp2,mp3,ogg,spx,flac,ape,mac";
-    public static final File HOME = new File(System.getProperty("user.home") + File.separator + ".YOYOPlayer");
+    public static final File HOME = new File(System.getProperty("user.home") + File.separator + ".BatchExecutor");
     public static final int POSBARMAX = 1000;//位置滚动条最大的数
     public static final int VOLUMEMAX = 100;//音量最大
     public static final int BALANCEMAX = 5;//左右平衡最大的值
@@ -132,7 +132,7 @@ public class Config implements Serializable {
     /*******************************************************************/
     /*************普通变量定义区*****************************************/
     /*******************************************************************/
-    private static ResourceBundle rb = ResourceBundle.getBundle("com/hadeslee/yoyoplayer/util/UIInfo");
+    private static ResourceBundle rb = ResourceBundle.getBundle("org/batchexecutor/util/UIInfo");
     private boolean showLrc = true;//是否显示歌词秀窗口
     private boolean showPlayList = true;//是否显示播放列表
     private boolean showEq = true;//是否显示调音台
@@ -1236,7 +1236,10 @@ public class Config implements Serializable {
             if (!HOME.exists()) {
                 HOME.mkdirs();
             }
-            ois = new ObjectInputStream(new FileInputStream(new File(Config.HOME, NAME + ".dat")));
+            File file = new File(Config.HOME, NAME + ".dat");
+            if(file.exists() == false)
+            	save();
+            ois = new ObjectInputStream(new FileInputStream(file));
             config = (Config) ois.readObject();
             log.log(Level.INFO, Config.getResource("SongInfoDialog.loadConfigSuccess"));
             return true;

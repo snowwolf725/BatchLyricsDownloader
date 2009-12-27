@@ -37,7 +37,7 @@ import org.batchexecutor.audiotag.tag.Tag;
 public class OggFileReader extends AudioFileReader
 {
     // Logger Object
-    public static Logger logger = Logger.getLogger("com.hadeslee.jaudiotagger.audio.ogg");
+    public static Logger logger = Logger.getLogger("org.batchexecutor.jaudiotagger.audio.ogg");
 
     private OggInfoReader ir = new OggInfoReader();
     private OggVorbisTagReader vtr = new OggVorbisTagReader();
