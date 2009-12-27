@@ -52,7 +52,7 @@ import org.batchexecutor.audiotag.audio.ogg.VorbisVersion;
 public class VorbisIdentificationHeader implements VorbisHeader
 {
     // Logger Object
-    public static Logger logger = Logger.getLogger("com.hadeslee.jaudiotagger.audio.ogg.atom");
+    public static Logger logger = Logger.getLogger("org.batchexecutor.jaudiotagger.audio.ogg.atom");
 
     private int audioChannels;
     private boolean isValid = false;

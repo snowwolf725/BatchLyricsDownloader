@@ -147,12 +147,14 @@ public class Lyric implements Serializable {
     private void saveLyric(String lyric, PlayListItem info) {
         try {
             //如果歌手不为空,则以歌手名+歌曲名为最好组合
-            String name = info.getFormattedName() + ".lrc";
+            //String name = info.getFormattedName() + ".lrc";
 //            File dir = new File(Config.HOME, "Lyrics" + File.separator);
-            File dir = Config.getConfig().getSaveLyricDir();
+            //File dir = Config.getConfig().getSaveLyricDir();
+            File dir = new File(info.getLocation()).getParentFile();
             dir.mkdirs();
-            file = new File(dir, name);
-            BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(file), "GBK"));
+            //file = new File(dir, name);
+            file = info.getLyricFile();
+            BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(file), "UTF-8"));
             bw.write(lyric);
             bw.close();
             info.setLyricFile(file);

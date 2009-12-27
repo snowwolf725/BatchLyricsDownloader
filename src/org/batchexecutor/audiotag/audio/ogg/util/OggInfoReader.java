@@ -32,7 +32,7 @@ import org.batchexecutor.audiotag.audio.generic.GenericAudioHeader;
 public class OggInfoReader
 {
     // Logger Object
-    public static Logger logger = Logger.getLogger("com.hadeslee.jaudiotagger.audio.ogg.atom");
+    public static Logger logger = Logger.getLogger("org.batchexecutor.jaudiotagger.audio.ogg.atom");
 
     public GenericAudioHeader read(RandomAccessFile raf) throws CannotReadException, IOException
     {

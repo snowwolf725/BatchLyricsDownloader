@@ -450,7 +450,7 @@ public final class Util {
         MediaTracker mt = new MediaTracker(panel);
         Toolkit tk = Toolkit.getDefaultToolkit();
         for (int i = 1; i <= count; i++) {
-            URL url = Util.class.getResource("/com/hadeslee/yoyoplayer/pic/" + who + i + ".png");
+            URL url = Util.class.getResource("/org/batchexecutor/pic/" + who + i + ".png");
             imgs[i - 1] = tk.createImage(url);
             mt.addImage(imgs[i - 1], i);
         }
@@ -470,7 +470,7 @@ public final class Util {
      * @return 图片
      */
     public static Image getImage(String name) {
-        URL url = Util.class.getResource("/com/hadeslee/yoyoplayer/pic/" + name);
+        URL url = Util.class.getResource("/org/batchexecutor/pic/" + name);
         Image im = Toolkit.getDefaultToolkit().createImage(url);
         try {
             MediaTracker mt = new MediaTracker(panel);

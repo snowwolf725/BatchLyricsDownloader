@@ -41,7 +41,7 @@ import org.batchexecutor.audiotag.audio.generic.Utils;
 public class OggPageHeader
 {
     // Logger Object
-       public static Logger logger = Logger.getLogger("com.hadeslee.jaudiotagger.audio.ogg.atom");
+       public static Logger logger = Logger.getLogger("org.batchexecutor.jaudiotagger.audio.ogg.atom");
 
     //Capture pattern at start of header
     public static final byte[] CAPTURE_PATTERN = {'O', 'g', 'g','S'};

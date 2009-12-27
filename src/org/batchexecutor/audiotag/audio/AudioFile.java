@@ -44,7 +44,7 @@ import org.batchexecutor.audiotag.tag.Tag;
 public class AudioFile
 {
     //Logger
-    public static Logger log = Logger.getLogger("com.hadeslee.jaudiotagger.audio");
+    public static Logger log = Logger.getLogger("org.batchexecutor.jaudiotagger.audio");
 
     /**
      * The physical file that this instance represents.

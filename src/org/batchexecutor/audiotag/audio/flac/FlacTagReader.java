@@ -38,7 +38,7 @@ import org.batchexecutor.audiotag.tag.vorbiscomment.VorbisCommentTag;
 public class FlacTagReader
 {
     // Logger Object
-    public static Logger logger = Logger.getLogger("com.hadeslee.jaudiotagger.audio.flac");
+    public static Logger logger = Logger.getLogger("org.batchexecutor.jaudiotagger.audio.flac");
 
     private VorbisCommentReader vorbisCommentReader = new VorbisCommentReader();
 
