@@ -1,9 +1,9 @@
 package org.batchexecutor;
 import java.io.File;
-import java.io.IOException;
 import java.util.TimerTask;
 
 import javax.swing.DefaultListModel;
+import javax.swing.JCheckBox;
 import javax.swing.JLabel;
 import javax.swing.JList;
 import javax.swing.JTextField;
@@ -28,6 +28,7 @@ public class DownloadTask extends TimerTask {
 	JList _list_songList;
 	JTextField _txt_playerLocation;
 	boolean isEnable;
+	JCheckBox _chckbxGetSongLyrics;
 	
 	public boolean isEnable() {
 		return isEnable;
@@ -40,11 +41,13 @@ public class DownloadTask extends TimerTask {
 	DownloadTask(JLabel lrcCount,
 			DefaultListModel model_songList,
 			JList list_songList,
-			JTextField txt_playerLocation){
+			JTextField txt_playerLocation,
+			JCheckBox chckbxGetSongLyrics){
 		_lrcCount = lrcCount;
 		_model_songList = model_songList;
 		_list_songList = list_songList;
 		_txt_playerLocation = txt_playerLocation;
+		_chckbxGetSongLyrics = chckbxGetSongLyrics;
 		isEnable = true;
 	}
 
@@ -79,22 +82,26 @@ public class DownloadTask extends TimerTask {
 							continue;
 						
 						try {
-							/*Thread.sleep(5000);
-							Runtime r = Runtime.getRuntime();
-							Process p = r.exec(cmd);
-							Thread.sleep(20000);
-							p.getErrorStream();
-							p.destroy();
 							
-							_lrcfile = new File(_str_lrcpath);
-							if(_lrcfile.exists()){
-								int fileCount = Integer.parseInt(_lrcCount.getText()) + 1;
-								_lrcCount.setText(fileCount + "");
-							}*/
-							PlayListItem item = new PlayListItem(Util.getSongName(file), file.getPath(), -1, true);
-							Lyric lrc = new Lyric(item);
-							
-							Thread.sleep(20000);
+							if(_chckbxGetSongLyrics.isSelected()) {
+								PlayListItem item = new PlayListItem(Util.getSongName(file), file.getPath(), -1, true);
+								Lyric lrc = new Lyric(item);
+								
+								_lrcfile = new File(_str_lrcpath);
+								if(_lrcfile.exists()){
+									int fileCount = Integer.parseInt(_lrcCount.getText()) + 1;
+									_lrcCount.setText(fileCount + "");
+								}
+								
+								Thread.sleep(10000);
+							} else {
+								Thread.sleep(5000);
+								Runtime r = Runtime.getRuntime();
+								Process p = r.exec(cmd);
+								Thread.sleep(20000);
+								p.getErrorStream();
+								p.destroy();
+							}
 							isProcessOneFile = true;
 						//} catch (IOException e) {
 							// TODO Auto-generated catch block

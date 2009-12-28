@@ -338,15 +338,15 @@ public class MpegInfo implements TagInfo {
             emphasis = "none";
             if (props.containsKey("title")) {
                 title = (String) props.get("title");
-                title = toGBK(title);
+                title = toDefaultEncoding(title);
             }
             if (props.containsKey("author")) {
                 artist = (String) props.get("author");
-                artist = toGBK(artist);
+                artist = toDefaultEncoding(artist);
             }
             if (props.containsKey("album")) {
                 album = (String) props.get("album");
-                album = toGBK(album);
+                album = toDefaultEncoding(album);
             }
             if (props.containsKey("date")) {
                 year = (String) props.get("date");
@@ -357,7 +357,7 @@ public class MpegInfo implements TagInfo {
             }
             if (props.containsKey("mp3.id3tag.genre")) {
                 genre = (String) props.get("mp3.id3tag.genre");
-                genre = toGBK(genre);
+                genre = toDefaultEncoding(genre);
             }
             if (props.containsKey("mp3.id3tag.track")) {
                 try {
@@ -369,7 +369,7 @@ public class MpegInfo implements TagInfo {
         }
     }
 
-    private String toGBK(String s) {
+    private String toDefaultEncoding(String s) {
 //        return s;
         try {
             return new String(s.getBytes("iso8859-1"), Config.getConfig().getEncoding());
