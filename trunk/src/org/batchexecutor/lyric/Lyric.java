@@ -78,13 +78,13 @@ public class Lyric implements Serializable {
             return;
         } else {
             //否则就起一个线程去找了，先是本地找，然后再是网络上找
-            new Thread() {
-
-                public void run() {
+//            new Thread() {
+//
+//                public void run() {
                     doInit(info);
                     initDone = true;
-                }
-            }.start();
+//                }
+//            }.start();
         }
 
     }
@@ -153,7 +153,7 @@ public class Lyric implements Serializable {
             File dir = new File(info.getLocation()).getParentFile();
             dir.mkdirs();
             //file = new File(dir, name);
-            file = info.getLyricFile();
+            file = new File(dir, info.getName() + ".lrc");
             BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(file), "UTF-8"));
             bw.write(lyric);
             bw.close();

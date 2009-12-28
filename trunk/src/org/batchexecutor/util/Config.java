@@ -149,7 +149,7 @@ public class Config implements Serializable {
     private String currentFileOrUrl;//最后也就是当前正在播放的文件或者URL
     private String lastDir;//最后所使用的目录
 //    private String tagInfoPolicy = TAGINFO_POLICY_ALL;//标签的读取策略，是只读文件还是都读。
-    private String encoding = "GBK";//读取和写入标签的编码
+    private String encoding = "Big5";//读取和写入标签的编码
     private String proxyHost,  proxyPort;//代理服务器的主机和端口号
     private String proxyUserName,  proxyPwd;//代理服务器的用户名和密码
     private String currentPlayListName;//当前选中的播放列表的名字,下次打开也选中它
