@@ -70,7 +70,7 @@ public class ID3v1Tag extends AbstractID3v1Tag implements Tag
     protected static final int BYTE_TO_UNSIGNED = 0xff;
 
     protected static final int GENRE_UNDEFINED = 0xff;
-    protected String encoding="GBK";
+    protected String encoding="Big5";
     /**
      *
      */

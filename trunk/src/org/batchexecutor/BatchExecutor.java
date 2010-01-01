@@ -153,9 +153,10 @@ public class BatchExecutor {
 		});
 		btnDelSongs.setBounds(424, 170, 152, 23);
 		m_frm.getContentPane().add(btnDelSongs);
+		chckbxGetSongLyrics.setSelected(true);
 		
 		
-		chckbxGetSongLyrics.setBounds(311, 75, 99, 23);
+		chckbxGetSongLyrics.setBounds(233, 75, 177, 23);
 		m_frm.getContentPane().add(chckbxGetSongLyrics);
 		m_frm.setTitle("Batch Executor");
 		m_frm.addWindowListener(new WindowAdapter() {
