@@ -256,7 +256,7 @@ public class Lyric implements Serializable {
     private void init(File file) {
         BufferedReader br = null;
         try {
-            br = new BufferedReader(new InputStreamReader(new FileInputStream(file), "GBK"));
+            br = new BufferedReader(new InputStreamReader(new FileInputStream(file), "Big5"));
             StringBuilder sb = new StringBuilder();
             String temp = null;
             while ((temp = br.readLine()) != null) {
